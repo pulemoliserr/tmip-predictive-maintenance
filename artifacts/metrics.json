@@ -1,0 +1,84 @@
+{
+  "version": "pdm-d0a19a11",
+  "trained_at": "2026-10-16T19:18:07+00:00",
+  "config": {
+    "model_name": "Random Forest",
+    "model_params": {
+      "class_weight": null,
+      "max_depth": 16,
+      "max_features": 0.6,
+      "min_samples_leaf": 3,
+      "n_estimators": 300
+    },
+    "sampler": "none",
+    "outlier_mode": "clip",
+    "numeric_features": [
+      "air_temp",
+      "process_temp",
+      "rpm",
+      "torque",
+      "tool_wear",
+      "temp_diff",
+      "power",
+      "strain"
+    ],
+    "features": [
+      "air_temp",
+      "process_temp",
+      "rpm",
+      "torque",
+      "tool_wear",
+      "temp_diff",
+      "power",
+      "strain",
+      "type_L",
+      "type_M"
+    ],
+    "calibration": "isotonic",
+    "threshold": 0.22,
+    "cost_fp": 100,
+    "cost_fn": 400,
+    "seed": 42,
+    "test_metrics": {
+      "threshold": 0.22,
+      "TP": 58.0,
+      "FP": 3.0,
+      "FN": 10.0,
+      "TN": 1929.0,
+      "Accuracy": 0.9935,
+      "Precision": 0.9508196721311475,
+      "Recall": 0.8529411764705882,
+      "Specificity": 0.9984472049689441,
+      "F1": 0.8992248062015504,
+      "ROC-AUC": 0.9797032943612227,
+      "PR-AUC": 0.9021140422188738,
+      "Log Loss": 0.03137911495388368,
+      "Brier": 0.006998759232014936,
+      "Cost \u20ac": 4300.0
+    },
+    "strategy_costs": {
+      "L1 Reactive (never inspect)": 27200,
+      "L2 Inspect every machine": 193200,
+      "L3 Rule-based sensor limits": 42500,
+      "L4 ML \u2014 final model (thr 0.22)": 4300
+    }
+  },
+  "test": {
+    "threshold": 0.22,
+    "TP": 58,
+    "FP": 3,
+    "FN": 10,
+    "TN": 1929,
+    "accuracy": 0.9935,
+    "sensitivity": 0.8529411764705882,
+    "specificity": 0.9984472049689441,
+    "precision": 0.9508196721311475,
+    "f1": 0.8992248062015503,
+    "cost": 4300,
+    "roc_auc": 0.9797032943612227,
+    "pr_auc": 0.9021140422188738,
+    "n_test": 2000,
+    "n_train": 8000,
+    "failures_test": 68
+  }
+}
